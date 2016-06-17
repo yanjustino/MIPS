@@ -7,11 +7,13 @@ namespace MipsSharpSimulator
 {
 	public class ServerSocket
 	{
+		public bool Started { get; private set; }
+
 		private const int BUFFER_SIZE = 1024;
 
 		public void Start(int port)
 		{
-
+			Started = false;
 			Console.Title = "TCP/IP HTTP Server";
 			TcpListener listener = null;
 
@@ -19,6 +21,7 @@ namespace MipsSharpSimulator
 			{
 				listener = new TcpListener(IPAddress.Parse ("127.0.0.1"), port);
 				listener.Start();
+				Started = true;
 			}
 			catch (SocketException e)
 			{

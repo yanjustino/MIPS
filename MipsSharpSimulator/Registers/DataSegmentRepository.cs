@@ -72,8 +72,6 @@ namespace MipsSharpSimulator
 
 			var address = _data.Count == 0 ? ADDRESS_BASE : _data.Last ().Key + 4;
 			var addressLabel = address;
-			var data = new List<int> ();
-
 
 			foreach (var m in matriz) {
 				_data [address] = Convert.ToInt32 (m);

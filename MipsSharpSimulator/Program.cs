@@ -27,7 +27,7 @@ namespace MipsSharpSimulator
 			threadServer.Start ();
 
 			while (true) {
-				if (threadServer.ThreadState == ThreadState.Running) {
+				if (server.Started) {
 					Thread threadInterpreter = new Thread (() => {
 						interpreter.Start ();
 					});

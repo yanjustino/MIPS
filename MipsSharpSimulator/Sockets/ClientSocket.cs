@@ -14,8 +14,10 @@ namespace MipsSharpSimulator
 		{
 			try
 			{
+				var endpoint = ip.Split(':');
+
 				TcpClient clientSocket = new TcpClient();
-				clientSocket.Connect(ip, 8085);
+				clientSocket.Connect(endpoint[0], Convert.ToInt32(endpoint[1]));
 				NetworkStream serverStream = clientSocket.GetStream();
 				byte[] outStream = System.Text.Encoding.ASCII.GetBytes(message);
 				serverStream.Write(outStream, 0, outStream.Length);
@@ -23,7 +25,7 @@ namespace MipsSharpSimulator
 
 				byte[] inStream = new byte[10025];
 				serverStream.Read(inStream, 0, 10025);
-				string returndata = System.Text.Encoding.ASCII.GetString(inStream);
+				System.Text.Encoding.ASCII.GetString(inStream);
 			}
 			catch(Exception ex) {
 				throw ex;
