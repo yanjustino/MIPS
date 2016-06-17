@@ -1,0 +1,9 @@
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/MipsSharpSimulator.exe.mdb
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/MipsSharpSimulator.exe
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/obj/x86/Debug/MipsSharpSimulator.exe
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/obj/x86/Debug/MipsSharpSimulator.exe.mdb
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/master.txt
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/teste.asm
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/config.ini
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/master.asm
