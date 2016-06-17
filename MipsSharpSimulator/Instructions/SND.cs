@@ -19,7 +19,7 @@ namespace MipsSharpSimulator
 			var message = DataSegmentRepository.Current.GetBytes (size, address);
 
 			var socket = new ClientSocket ();
-			socket.Send (message);
+			socket.Send (ip, message);
 		}
 	}
 }
