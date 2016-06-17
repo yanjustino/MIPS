@@ -59,6 +59,8 @@ namespace MipsSharpSimulator
 			var total = 0;
 
 			foreach (var item in matriz) {
+				if (string.IsNullOrEmpty (item))
+					continue;
 				if (total == size)
 					break;
 				Set (address + total, Convert.ToInt32 (item));

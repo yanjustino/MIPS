@@ -15,7 +15,7 @@ namespace MipsSharpSimulator
 
 		public void Start()
 		{
-			Console.Write ("Interpretador iniciado");
+			Console.WriteLine ("Interpretador iniciado");
 
 			var lines = System.IO.File.ReadAllLines (filePath);
 
@@ -40,9 +40,14 @@ namespace MipsSharpSimulator
 
 				if (inst != null) {
 					InstructionRepository.Current.Add (inst);
+					Console.WriteLine ("CARREGANDO a instruçao {0} : {1}", inst.Label, inst.InstructionLine);
 					inst.Process ();
+					Console.WriteLine ("PROCESSOU a instruçao {0} : {1}", inst.Label, inst.InstructionLine);
 				}
-			}			
+			}	
+
+			RegisterRepository.Current.PrintValue ();
+			DataSegmentRepository.Current.Print ();
 		}
 
 		private void processLabel(string line)

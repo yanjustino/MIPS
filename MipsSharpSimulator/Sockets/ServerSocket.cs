@@ -21,6 +21,7 @@ namespace MipsSharpSimulator
 			{
 				listener = new TcpListener(IPAddress.Parse ("127.0.0.1"), port);
 				listener.Start();
+				Console.WriteLine("Servidor Iniciado na porta: {0}", port);
 				Started = true;
 			}
 			catch (SocketException e)
@@ -48,10 +49,12 @@ namespace MipsSharpSimulator
 					{
 						bytesReceived = stream.Read(buffer, 0, BUFFER_SIZE);
 						var dataFromClient = Encoding.ASCII.GetString(buffer, 0, bytesReceived);
-						Console.WriteLine(dataFromClient);
 
 						var ipClient = ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString();
 						SocketMessageRepository.Current.Add(ipClient, dataFromClient);
+
+						Console.WriteLine("Mensagem recebida do ip {0}", ipClient);
+						Console.WriteLine(dataFromClient);
 
 						if (bytesReceived != BUFFER_SIZE) break;
 					}
@@ -61,7 +64,7 @@ namespace MipsSharpSimulator
 							"HTTP/1.1 200 OK",
 							"Content-Type: text/html; charset=UTF-8",
 							"",
-							"Hello world from TcpServer"
+							"From TcpServer"
 						));
 
 					stream.Write(response, 0, response.Length);

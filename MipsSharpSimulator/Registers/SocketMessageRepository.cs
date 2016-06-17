@@ -24,6 +24,8 @@ namespace MipsSharpSimulator
 
 		public void Add(string ip, string value)
 		{
+			if (!_recevieds.ContainsKey (ip))
+				_recevieds.Add (ip, value);
 			_recevieds[ip] = value;
 		}
 

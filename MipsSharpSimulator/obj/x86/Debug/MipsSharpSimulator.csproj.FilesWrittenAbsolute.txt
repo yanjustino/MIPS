@@ -7,3 +7,4 @@
 /Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/teste.asm
 /Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/config.ini
 /Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/master.asm
+/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/bin/Debug/slave.asm
