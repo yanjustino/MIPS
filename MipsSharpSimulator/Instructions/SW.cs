@@ -17,10 +17,6 @@ namespace MipsSharpSimulator
 			var value = Convert.ToInt32 (RegisterRepository.Current.Get (Parameters [1]));
 
 			DataSegmentRepository.Current.Set (address,  value);
-
-			Console.WriteLine ("******* SW *******");
-			Console.WriteLine (DataSegmentRepository.Current.Get(address));
-			Console.WriteLine ("******* SW *******");
 		}
 	}
 }
