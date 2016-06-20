@@ -7,8 +7,8 @@ Aux:.word 0,0,0,0,0,0
 	    .globl main
 	
 main:	
-        li $s0, 0
-        li $s1, 6
+        li $s0, 1
+        li $s1, 2
 	    li $s2, 0
         la $t0, MatrizA
         la $t1, MatrizB
@@ -26,15 +26,15 @@ enviaB: snd $s0, 144, $t1
 
 recebeC: rcv $s3, 24, $t3
          li $a0, 0
-         li $a1, 5
+         li $a1, 1
          addi $s3, $s3, 1
          mult $a2, $t2, $s3
 
-copia: lw $a3, 0($t3)
-       sw $a3, 0($a2)
-       addi $t3, $t3, 4
-       addi $a2, $a2, 4
-       addi $a0, $a0, 1
-       bne $a0, $a1, copia
-       addi $s2, $s2, 1
-       bne $s2, $s1, recebeC
+copia:	 lw $a3, 0($t3)
+         sw $a3, 0($a2)
+         addi $t3, $t3, 4
+         addi $a2, $a2, 4
+         addi $a0, $a0, 1
+         bne $a0, $a1, copia
+         addi $s2, $s2, 1
+         bne $s2, $s1, recebeC

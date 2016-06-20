@@ -7,7 +7,6 @@ VetorC: .word 0,0,0,0,0,0
 	.globl main
 	
 main:	
-		li $s3, 0
         li $s0, 0
         li $s1, 6
         la $t0, VetorA
@@ -22,9 +21,8 @@ recebeB: rcv $s3, 144, $t1
 		li $a1, 6
 		li $s3, 6
 		li $t4, 0
-        addi $t3, $t1, 0
-        addi $t4, $t0, 0
-
+	    addi $t3, $t1, 0
+	    addi $t4, $t0, 0
 
 proxCol: addi $t5, $t3, 0
 
@@ -40,16 +38,12 @@ soma:
 		addi $t3, $t3, 24
 		addi $t4, $t4, 4
 		bne $a0, $a1, soma
+
 		li $a0, 0
 		addi $t4, $t0, 0
 		addi $t3, $t5, 4 
 		addi $t2, $t2, 4
 		addi $s2, $s2, 1
 		bne $s2, $s3, proxCol	
-	
-enviaA: snd $s0, 24, $t2                
 
-
-
-
-
+enviaA: snd $s0, 24, $t2

@@ -14,9 +14,11 @@ namespace MipsSharpSimulator
 			var regis = this.Parameters [2].Remove (0, 1).Replace ("(", "").Replace (")", "");
 
 			var address = index + Convert.ToInt32(RegisterRepository.Current.Get (regis));
-			var value = DataSegmentRepository.Current.Get (address);
+			var value = DataSegmentRepository.Current.GetAddress (address);
 
 			RegisterRepository.Current.Add (Parameters[1], value.ToString());
+
+			Resultado = Convert.ToInt32 (value);
 		}
 	}
 }

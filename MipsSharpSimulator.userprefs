@@ -1,39 +1,42 @@
 ﻿<Properties StartupItem="MipsSharpSimulator/MipsSharpSimulator.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MipsSharpSimulator/Sockets/ClientSocket.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MipsSharpSimulator/master.asm">
     <Files>
-      <File FileName="MipsSharpSimulator/Interpreter/Interpreter.cs" Line="45" Column="35" />
-      <File FileName="MipsSharpSimulator/master.txt" Line="13" Column="12" />
-      <File FileName="MipsSharpSimulator/Instructions/Factory/InstructionFactory.cs" Line="36" Column="15" />
-      <File FileName="MipsSharpSimulator/Instructions/LW.cs" Line="1" Column="1" />
-      <File FileName="MipsSharpSimulator/Instructions/Base/Instruction.cs" Line="14" Column="38" />
+      <File FileName="MipsSharpSimulator/Sockets/ClientSocket.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Sockets/ServerSocket.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/SW.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/SUB.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/MUL.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Interpreter/Interpreter.cs" Line="12" Column="2" />
+      <File FileName="MipsSharpSimulator/Instructions/RCV.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Registers/DataSegmentRepository.cs" Line="23" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/Factory/InstructionFactory.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/ADDi.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Program.cs" Line="53" Column="1" />
+      <File FileName="MipsSharpSimulator/master.old.asm" Line="3" Column="1" />
+      <File FileName="MipsSharpSimulator/slave.old.asm" Line="28" Column="18" />
+      <File FileName="MipsSharpSimulator/Registers/RegisterRepository.cs" Line="9" Column="23" />
+      <File FileName="MipsSharpSimulator/Instructions/SND.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Registers/SocketMessageRepository.cs" Line="45" Column="1" />
+      <File FileName="MipsSharpSimulator/Registers/NetworkIdsRepository.cs" Line="26" Column="1" />
+      <File FileName="MipsSharpSimulator/master.config" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/Base/Instruction.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/ADD.cs" Line="1" Column="1" />
       <File FileName="MipsSharpSimulator/Registers/InstructionRepository.cs" Line="1" Column="1" />
-      <File FileName="MipsSharpSimulator/Registers/DataSegmentRepository.cs" Line="63" Column="6" />
-      <File FileName="MipsSharpSimulator/Registers/RegisterRepository.cs" Line="33" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/BEQ.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/BNE.cs" Line="1" Column="1" />
       <File FileName="MipsSharpSimulator/Instructions/LA.cs" Line="1" Column="1" />
       <File FileName="MipsSharpSimulator/Instructions/LI.cs" Line="1" Column="1" />
-      <File FileName="MipsSharpSimulator/Program.cs" Line="32" Column="24" />
-      <File FileName="MipsSharpSimulator/Instructions/SW.cs" Line="1" Column="1" />
-      <File FileName="MipsSharpSimulator/Instructions/Factory/BEQ.cs" Line="1" Column="1" />
-      <File FileName="MipsSharpSimulator/Instructions/BNE.cs" Line="1" Column="1" />
-      <File FileName="MipsSharpSimulator/master.asm" Line="33" Column="17" />
-      <File FileName="MipsSharpSimulator/Instructions/ADDi.cs" Line="18" Column="1" />
-      <File FileName="MipsSharpSimulator/Instructions/BEQ.cs" Line="1" Column="1" />
-      <File FileName="MipsSharpSimulator/Instructions/SND.cs" Line="19" Column="13" />
-      <File FileName="MipsSharpSimulator/Registers/NetworkIdsRepository.cs" Line="37" Column="1" />
-      <File FileName="MipsSharpSimulator/Instructions/RCV.cs" Line="14" Column="31" />
-      <File FileName="MipsSharpSimulator/config.ini" Line="7" Column="17" />
-      <File FileName="MipsSharpSimulator/Sockets/ServerSocket.cs" Line="25" Column="1" />
-      <File FileName="MipsSharpSimulator/Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="MipsSharpSimulator/Sockets/ClientSocket.cs" Line="31" Column="1" />
-      <File FileName="MipsSharpSimulator/Registers/SocketMessageRepository.cs" Line="35" Column="4" />
-      <File FileName="MipsSharpSimulator/slave.asm" Line="26" Column="13" />
-      <File FileName="MipsSharpSimulator/Instructions/MUL.cs" Line="14" Column="64" />
+      <File FileName="MipsSharpSimulator/Instructions/LW.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/Instructions/MULT.cs" Line="1" Column="1" />
+      <File FileName="MipsSharpSimulator/master.asm" Line="4" Column="1" />
+      <File FileName="MipsSharpSimulator/slave.asm" Line="4" Column="1" />
+      <File FileName="MipsSharpSimulator/slave.config" Line="1" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/Instructions/SND.cs" line="13" column="1" />
+      <Breakpoint file="/Users/yanjustino/Projects/MipsSharpSimulator/MipsSharpSimulator/Registers/NetworkIdsRepository.cs" line="26" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

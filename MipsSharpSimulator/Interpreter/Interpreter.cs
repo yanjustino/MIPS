@@ -22,6 +22,7 @@ namespace MipsSharpSimulator
 			foreach (var line in lines) {
 				var valueLine = line.Trim ();
 
+
 				if (string.IsNullOrEmpty (valueLine))
 					continue;
 
@@ -40,9 +41,8 @@ namespace MipsSharpSimulator
 
 				if (inst != null) {
 					InstructionRepository.Current.Add (inst);
-					Console.WriteLine ("CARREGANDO a instruçao {0} : {1}", inst.Label, inst.InstructionLine);
 					inst.Process ();
-					Console.WriteLine ("PROCESSOU a instruçao {0} : {1}", inst.Label, inst.InstructionLine);
+					Console.WriteLine ("{0} = {1}", inst.InstructionLine, inst.Resultado.ToString());
 				}
 			}	
 

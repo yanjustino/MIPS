@@ -7,6 +7,7 @@ namespace MipsSharpSimulator
 		public string Label { get; private set; }
 		public string InstructionLine { get; private set; }
 		public string[] Parameters { get; private set; }
+		public int Resultado { get; protected set; }
 
 		public Instruction (string label, string instruction)
 		{

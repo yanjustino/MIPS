@@ -5,9 +5,23 @@ using System.IO;
 
 namespace MipsSharpSimulator
 {
+	public class NetworkAddress
+	{
+		public int Id { get; set; }
+		public string Ip { get; set; }
+		public int Port { get; set; }
+
+		public override string ToString ()
+		{
+			return string.Format ("{0}:{1}", Ip, Port);
+		}
+	}
+
 	public class NetworkIdsRepository
 	{
 		private Dictionary<int, string> _registers;
+
+		private List<NetworkAddress> _address;
 
 		private static NetworkIdsRepository _current;
 		public static NetworkIdsRepository Current
@@ -22,18 +36,26 @@ namespace MipsSharpSimulator
 		public NetworkIdsRepository ()
 		{
 			_registers = new Dictionary<int, string> ();
+			_address = new List<NetworkAddress> ();
 
-			var lines = File.ReadAllLines ("config.ini");
+			var file = Program.Environment == "MASTER" ? "master.config" : "slave.config";
+
+			var lines = File.ReadAllLines (file);
 
 			foreach (var item in lines) {
-				var addressIp = item.Split ('=');
-				_registers.Add (Convert.ToInt32(addressIp[0]), addressIp[1]);
+				var ip = item.Split (';');
+
+				_address.Add (new NetworkAddress {
+					Id = Convert.ToInt32 (ip [0]),
+					Ip = ip [1],
+					Port = Convert.ToInt32 (ip[2])
+				});
 			}
 		}
 
-		public string Get(int index)
+		public NetworkAddress Get(int index)
 		{
-			return _registers [index];
+			return _address.Where (x => x.Id == index).FirstOrDefault ();
 		}
 	}
 }

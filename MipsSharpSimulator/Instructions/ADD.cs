@@ -16,6 +16,8 @@ namespace MipsSharpSimulator
 			var s1 = Convert.ToInt32 (s2) + Convert.ToInt32 (s3);
 
 			RegisterRepository.Current.Add (this.Parameters [1], s1.ToString());
+
+			Resultado = s1;
 		}
 	}
 }

@@ -19,7 +19,7 @@
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
-    <Commandlineparameters>-m 8081</Commandlineparameters>
+    <Commandlineparameters>-m 1233</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>full</DebugType>
@@ -36,7 +36,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Interpreter\Interpreter.cs" />
+    <Compile Include="Interpreter\Interpreter.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Registers\RegisterRepository.cs" />
     <Compile Include="Instructions\ADDi.cs" />
     <Compile Include="Instructions\ADD.cs" />
@@ -54,7 +56,9 @@
     <Compile Include="Instructions\BNE.cs" />
     <Compile Include="Instructions\BEQ.cs" />
     <Compile Include="Instructions\SND.cs" />
-    <Compile Include="Registers\NetworkIdsRepository.cs" />
+    <Compile Include="Registers\NetworkIdsRepository.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Instructions\RCV.cs" />
     <Compile Include="Sockets\ClientSocket.cs" />
     <Compile Include="Sockets\ServerSocket.cs" />
@@ -70,13 +74,19 @@
     <Folder Include="Sockets\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="config.ini">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="master.asm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="slave.asm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="slave.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="master.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="start_slaves.sh">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

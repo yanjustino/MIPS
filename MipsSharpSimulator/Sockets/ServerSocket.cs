@@ -9,7 +9,7 @@ namespace MipsSharpSimulator
 	{
 		public bool Started { get; private set; }
 
-		private const int BUFFER_SIZE = 1024;
+		private const int BUFFER_SIZE = 10024;
 
 		public void Start(int port)
 		{
@@ -50,11 +50,15 @@ namespace MipsSharpSimulator
 						bytesReceived = stream.Read(buffer, 0, BUFFER_SIZE);
 						var dataFromClient = Encoding.ASCII.GetString(buffer, 0, bytesReceived);
 
-						var ipClient = ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString();
-						SocketMessageRepository.Current.Add(ipClient, dataFromClient);
+						var s = ((IPEndPoint)client.Client.RemoteEndPoint);
 
-						Console.WriteLine("Mensagem recebida do ip {0}", ipClient);
-						Console.WriteLine(dataFromClient);
+						var ipClient = s.Address.ToString();
+
+						Console.WriteLine("Acesso remoto de {0}", ipClient);
+
+						while(SocketMessageRepository.Current.HasValue(ipClient)){}
+
+						SocketMessageRepository.Current.Add(ipClient, dataFromClient);
 
 						if (bytesReceived != BUFFER_SIZE) break;
 					}

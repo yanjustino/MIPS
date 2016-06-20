@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace MipsSharpSimulator
@@ -36,6 +37,8 @@ namespace MipsSharpSimulator
 
 		public string Get(string ip)
 		{
+			if (!_recevieds.ContainsKey (ip))
+				return string.Empty;
 			return _recevieds [ip];
 		}
 

@@ -10,7 +10,7 @@ namespace MipsSharpSimulator
 
 		public override void Process ()
 		{
-			var dados = DataSegmentRepository.Current.Get (Parameters [2]);
+			var dados = DataSegmentRepository.Current.GetInitialAddress (Parameters [2]);
 
 			RegisterRepository.Current.Add (this.Parameters [1], dados.ToString());
 		}
